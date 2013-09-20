@@ -64,7 +64,6 @@ public class RadiologyGroupController {
 		initRadiologyGroupController();
 		RadiologyGroup radiologyGroup = new RadiologyGroup();
 		radiologyGroup.setName(post.get("name").toString());
-		radiologyGroup.setOrderType(post.get("orderType").toString());
                 radiologyGroup.setModality(post.get("modality").toString());
                 radiologyGroup.setBodyScan(post.get("bodyScan").toString());
                 if (post.get("startDate") != null) {
@@ -101,7 +100,6 @@ public class RadiologyGroupController {
 		SimpleObject obj = new SimpleObject();
 		obj.add("uuid", created.getUuid());
 		obj.add("name", created.getName());
-		obj.add("orderType", created.getOrderType());
                 obj.add("modality", created.getModality());
 		obj.add("bodyScan", created.getBodyScan());
                 obj.add("startDate", created.getStartDate());
@@ -132,7 +130,6 @@ public class RadiologyGroupController {
 		initRadiologyGroupController();
 		RadiologyGroup radiologyGroup = service.getRadiologyGroupByUuid(uuid);
 		radiologyGroup.setName(post.get("name").toString());
-		radiologyGroup.setOrderType(post.get("orderType").toString());
                 radiologyGroup.setModality(post.get("modality").toString());
                 radiologyGroup.setBodyScan(post.get("bodyScan").toString());
                 if (post.get("startDate") != null) {
@@ -169,7 +166,6 @@ public class RadiologyGroupController {
 		SimpleObject obj = new SimpleObject();
 		obj.add("uuid", created.getUuid());
 		obj.add("name", created.getName());
-		obj.add("orderType", created.getOrderType());
                 obj.add("modality", created.getModality());
 		obj.add("bodyScan", created.getBodyScan());
                 obj.add("startDate", created.getStartDate());
@@ -191,7 +187,7 @@ public class RadiologyGroupController {
 	 * @throws ResponseException
 	 */
 	@RequestMapping(method = RequestMethod.GET)
-	@WSDoc("Get All Unretired Drug Groups in the system")
+	@WSDoc("Get All Radiology Groups in the system")
 	@ResponseBody()
 	public String getAllRadiologyGroups(HttpServletRequest request, HttpServletResponse response) throws ResponseException {
 		initRadiologyGroupController();
@@ -201,7 +197,6 @@ public class RadiologyGroupController {
 			SimpleObject obj = new SimpleObject();
                         obj.add("uuid", radiologyGroup.getUuid());
                         obj.add("name", radiologyGroup.getName());
-                        obj.add("orderType", radiologyGroup.getOrderType());
                         obj.add("modality", radiologyGroup.getModality());
                         obj.add("bodyScan", radiologyGroup.getBodyScan());
                         obj.add("startDate", radiologyGroup.getStartDate());
