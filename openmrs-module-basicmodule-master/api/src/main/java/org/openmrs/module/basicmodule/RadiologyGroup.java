@@ -11,32 +11,26 @@ package org.openmrs.module.basicmodule;
 import java.io.Serializable;
 import java.util.Date;
 import org.openmrs.BaseOpenmrsMetadata;
-import org.openmrs.Concept;
 
 public class RadiologyGroup extends BaseOpenmrsMetadata implements Serializable {
 	
 	private Integer id;
-	private String uuid;
 	private String name;
-        private String orderType;
-        private String modality;
-        private String bodyScan;
-        private Date startDate;
-        private Date expiryDate;
-        private String refPhyName;
-        private String perPhyName;
-        private String readPhyName;
-        private String scheduledStatus;
-        private String performedStatus;
-        private String addInfo;
-	private Concept concept;
+        private String Modality;
+        private String BodyScan;
+        private Date StartDate;
+        private Date ExpiryDate;
+        private String RefPhyName;
+        private String PerPhyName;
+        private String ReadPhyName;
+        private String ScheduledStatus;
+        private String PerformedStatus;
+        private String AddInfo;
+        private String Priority;
         
 	public RadiologyGroup() {
 	}
 	/** constructor with id */
-	public RadiologyGroup(String uuid) {
-		this.uuid = uuid;
-	}
 	/**
 	 * @param id: id to set
 	 */
@@ -53,13 +47,6 @@ public class RadiologyGroup extends BaseOpenmrsMetadata implements Serializable 
 		return id;
 	}
 	
-	public String getuuid() {
-		return this.uuid;
-	}	
-	public void setuuid(String uuid) {
-		this.uuid = uuid;
-	}
-	
         @Override
 	public String getName() {
 		return this.name;
@@ -69,90 +56,83 @@ public class RadiologyGroup extends BaseOpenmrsMetadata implements Serializable 
 		this.name = name;
 	}
 	
-	public String getOrderType() {
-		return this.orderType;
-	}
-	public void setOrderType(String orderType) {
-		this.orderType = orderType;
-	}
-	
 	public String getModality() {
-		return this.modality;
+		return this.Modality;
 	}
-	public void setModality(String modality) {
-		this.modality = modality;
+	public void setModality(String Modality) {
+		this.Modality = Modality;
+	}
+        
+        public String getPriority() {
+		return this.Modality;
+	}
+	public void setPriority(String Priority) {
+		this.Priority = Priority;
 	}
         
         public String getBodyScan() {
-		return this.bodyScan;
+		return this.BodyScan;
 	}
-	public void setBodyScan(String bodyScan) {
-		this.bodyScan = bodyScan;
+	public void setBodyScan(String BodyScan) {
+		this.BodyScan = BodyScan;
 	}
 	
         public Date getStartDate() {
-		return this.startDate;
+		return this.StartDate;
 	}
-	public void setStartDate(Date startDate) {
-		this.startDate = startDate;
+	public void setStartDate(Date StartDate) {
+		this.StartDate = StartDate;
 	}
         
         public Date getExpiryDate() {
-		return this.expiryDate;
+		return this.ExpiryDate;
 	}
-	public void setExpiryDate(Date expiryDate) {
-		this.expiryDate = expiryDate;
+	public void setExpiryDate(Date ExpiryDate) {
+		this.ExpiryDate = ExpiryDate;
 	}
         
         public String getRefPhyName() {
-		return this.refPhyName;
+		return this.RefPhyName;
 	}
-	public void setRefPhyName(String refPhyName) {
-		this.refPhyName = refPhyName;
+	public void setRefPhyName(String RefPhyName) {
+		this.RefPhyName = RefPhyName;
 	}
         
         public String getPerPhyName() {
-		return this.perPhyName;
+		return this.PerPhyName;
 	}
-	public void setPerPhyName(String perPhyName) {
-		this.perPhyName = perPhyName;
+	public void setPerPhyName(String PerPhyName) {
+		this.PerPhyName = PerPhyName;
 	}
         
         public String getReadPhyName() {
-		return this.readPhyName;
+		return this.ReadPhyName;
 	}
-	public void setReadPhyName(String readPhyName) {
-		this.readPhyName = readPhyName;
+	public void setReadPhyName(String ReadPhyName) {
+		this.ReadPhyName = ReadPhyName;
 	}
         
         public String getScheduledStatus() {
-		return this.scheduledStatus;
+		return this.ScheduledStatus;
 	}
-	public void setScheduledStatus(String scheduledStatus) {
-		this.scheduledStatus = scheduledStatus;
+	public void setScheduledStatus(String ScheduledStatus) {
+		this.ScheduledStatus = ScheduledStatus;
 	}
         
         public String getPerformedStatus() {
-		return this.performedStatus;
+		return this.PerformedStatus;
 	}
-	public void setPerformedStatus(String performedStatus) {
-		this.performedStatus = performedStatus;
+	public void setPerformedStatus(String PerformedStatus) {
+		this.PerformedStatus = PerformedStatus;
 	}
         
         public String getAddInfo() {
-		return this.addInfo;
+		return this.AddInfo;
 	}
-	public void setAddInfo(String addInfo) {
-		this.addInfo = addInfo;
+	public void setAddInfo(String AddInfo) {
+		this.AddInfo = AddInfo;
 	}
         
-	public Concept getConcept() {
-		return this.concept;
-	}
-	
-	public void setConcept(Concept concept) {
-		this.concept = concept;
-	}   
 
 	
 	/**
